@@ -18,4 +18,12 @@ npm run build
 npm run build --report
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+# Steps
+
+## Day1
+
+1. built the folder structures.
+
+2. created houtai's header component
+
+3. key words: :gutter and :span of layout in elementUI, 
