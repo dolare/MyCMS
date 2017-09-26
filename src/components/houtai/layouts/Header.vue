@@ -4,7 +4,7 @@
             <!--Logo area-->
             <el-col :xs="12" :sm="12" :md="4">
                 <div class="logo">
-                    <span class="logo_prefix">JSPang</span><span class="logo_suffix">Admin</span>
+                    <span class="logo_prefix">Rui</span><span class="logo_suffix">Admin</span>
                 </div>
             </el-col>
     
@@ -17,15 +17,9 @@
                 </div>
             </el-col>
             <!-- header right area-->
-            <el-col :xs="24" :sm="12" :md="4">
-                <div class="website">
-                    <span>Website:</span>
-                    <span>www.jspang.com</span>
-                </div>
-            </el-col>
-    
-    
-            <el-col :xs="8" :sm="8" :md="{span:2,offset: 4}">
+            
+
+            <el-col :xs="8" :sm="8" :md="{span:2,offset:8}">
                 <div class="header-right">
                     <el-col :span="10">
     
@@ -60,10 +54,10 @@
                     <el-col :span="8">
                         <el-dropdown menu-align="start">
                             <span>
-                                    <el-badge :value="3" class="item">
-                                        <i class="el-icon-date"></i>
-                                    </el-badge>
-                                </span>
+                                <el-badge :value="3" class="item">
+                                    <i class="el-icon-date"></i>
+                                </el-badge>
+                            </span>
                             <el-dropdown-menu slot="dropdown">
                                 <el-dropdown-item>
                                     <span class="pop-title">You have new tasks! </span>
@@ -93,41 +87,6 @@
     
             </el-col>
     
-    
-            <el-col :xs="8" :sm="8" :md="2">
-                <div class="user-header">
-                    <el-dropdown trigger="click" menu-align="start">
-                        <img src="" width="50px" />
-                        <el-dropdown-menu slot="dropdown">
-                            <el-dropdown-item>
-                                <div class="setting-div">
-                                    <span class="setting-icon"><i class="material-icons">account_box</i></span>
-                                    <span class="setting-string"> Profile  个人</span>
-                                </div>
-                            </el-dropdown-item>
-                            <el-dropdown-item divided>
-                                <div class="setting-div">
-                                    <span class="setting-icon"><i class="material-icons">settings</i></span>
-                                    <span class="setting-string"> Settings  设置</span>
-                                </div>
-    
-                            </el-dropdown-item>
-                            <el-dropdown-item divided>
-                                <div class="setting-div">
-                                    <span class="setting-icon"><i class="material-icons">assignment_return</i></span>
-                                    <span class="setting-string"> Sign out  退出</span>
-                                </div>
-    
-                            </el-dropdown-item>
-    
-                        </el-dropdown-menu>
-                    </el-dropdown>
-    
-    
-                </div>
-    
-    
-            </el-col>
         </el-row>
     
     
@@ -223,8 +182,7 @@
         color:#fff;
     }
     .header .search{
-        float: left;
-        color:#fff;
+        color: #fff;
         font-size:14px;
     }
     .website span{
