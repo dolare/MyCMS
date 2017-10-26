@@ -1,13 +1,17 @@
 let mongoose  = require('mongoose');
 let Schema = mongoose.Schema;
-let uuid = require('node-uuid');
-let momonet = require('momonet');
+let uuid = require('node-uuid/v4');
+let moment = require('moment');
 
-var UserSchema = new Schema({
+let UserSchema = new Schema({
     _id: {
         type: String,
         unique: true,
-        default: uuid.v4
+        default: uuid()
+    },
+    isAdmin: {
+       type: Boolean,
+       default: false
     },
     enable: {
         type: Boolean,
@@ -20,10 +24,11 @@ var UserSchema = new Schema({
     username: String,
     password: String,
     phone: Number,
-    group:{
-        type: String
-    },
-    date_create: {
+    group: [{
+        type: String,
+        ref: 'AdminGroup'
+    }],
+    date_created: {
         type: Date,
         default: Date.now()
     },
@@ -31,7 +36,7 @@ var UserSchema = new Schema({
         type: Date,
         default: Date.now()
     }
-})
+});
 
 UserSchema.set('toJSON', { getters: true, virtuals: true });
 UserSchema.set('toObject', { getters: true, virtuals: true });
@@ -40,7 +45,7 @@ UserSchema.set('toObject', { getters: true, virtuals: true });
     this.date_create =
 })*/
 
-UserSchema.path('date_create').get(function (v) {
+UserSchema.path('date_created').get(function (v) {
     return moment(v).format("YYYY-MM-DD HH:mm:ss");
 });
 
