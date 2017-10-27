@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script scoped>
+<script>
 export default {
   name: 'app'
 }
@@ -16,7 +16,7 @@ html,body,#app,.wrapper{
     width:100%;
     height:100%;
     overflow: hidden;
-    
+
 }
 body{
     font-family:"Helvetica Neue",Helvetica, "Microsoft YaHei", Arial, STHeiTi, sans-serif;
