@@ -27,3 +27,9 @@ npm run build --report
 2. created houtai's header component
 
 3. key words: :gutter and :span of layout in elementUI, 
+
+
+
+## front end deploy:
+
+Created a nginX reverse proxy server
