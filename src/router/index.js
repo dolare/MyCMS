@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import AdminHome from '@/components/houtai/layouts/Home'
-import Home from '@/components/qiantai/pages/home'
+import Home from '@/components/qiantai/pages/Home'
 
 
 Vue.use(Router);
