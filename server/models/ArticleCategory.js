@@ -18,7 +18,7 @@ let ArticleCategorySchema = new Schema({
         type: Number,
         default: 0
     },
-    parentId: String,
+    subAr: String,
     sortPath: String,
     date_created: {
         type: Date,

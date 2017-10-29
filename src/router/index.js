@@ -1,20 +1,25 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Header from '@/components/houtai/layouts/Header'
-import Home from '@/components/houtai/layouts/Home'
-import Sidebar from '@/components/houtai/layouts/Sidebar'
+
+import AdminHome from '@/components/houtai/layouts/Home'
+import Home from '@/components/qiantai/pages/home'
 
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'admin',
-      component: Home
-    }
-  ]
+    routes: [
+        {
+            path: '/admin',
+            name: 'admin',
+            component: AdminHome
+        },
+        {
+            path: '/',
+            name: 'home',
+            component: Home
+        }
+    ]
 })
 
 
