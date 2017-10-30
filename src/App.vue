@@ -15,13 +15,16 @@ export default {
 html,body,#app,.wrapper{
     width:100%;
     height:100%;
-    overflow: hidden;
-
 }
 body{
     font-family:"Helvetica Neue",Helvetica, "Microsoft YaHei", Arial, STHeiTi, sans-serif;
     color:#777777;
+    background: #40E0D0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
+
 a{text-decoration: none}
 
 .el-badge__content{

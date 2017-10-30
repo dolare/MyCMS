@@ -48,7 +48,7 @@
 <style>
     #copyright{
         background-color: #111111;
-        height:60px;
+        height: 60px;
         padding-left: 100px;
         line-height: 60px;
     }
@@ -56,6 +56,7 @@
         font-size: 12px;
         color: white;
         display: inline-block;
+        height: inherit;
     }
     .hide{
         visibility: hidden;

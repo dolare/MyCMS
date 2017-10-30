@@ -1,9 +1,9 @@
 <template>
-    <el-row>
+    <el-row style="margin-top: 50px;">
         <el-col :md="2" :lg="4" :xl="6"><div style="border: 1px red solid;" class="grid-content bg-purple-light"></div></el-col>
-        <el-col :sm="24" :md="20" :lg="16" :xl="12">
+        <el-col :sm="24" :md="20" :lg="16" :xl="12" class="main_page">
             <el-container :span="12" :offset="6" >
-                <el-header style="margin-top: 50px;">
+                <el-header>
                     <nav-header>
                     </nav-header>
                 </el-header>
@@ -49,8 +49,8 @@
 </script>
 
 <style scoped>
-    .el-container{
-        margin-bottom: 50px;
+    .main_page{
+        background-color: white;
     }
     #footer {
         background-color: #222222;
@@ -73,13 +73,4 @@
         margin-bottom: 40px;
     }
 
-    .el-container:nth-child(5) .el-aside,
-    .el-container:nth-child(6) .el-aside {
-        line-height: 260px;
-        line-height: 260px;
-    }
-
-    .el-container:nth-child(7) .el-aside {
-        line-height: 320px;
-    }
 </style>

@@ -20,5 +20,5 @@ new Vue({
     components: { App },
     beforeCreate: function(){
         console.log('before create App...');
-  }
+    }
 });
