@@ -1,10 +1,10 @@
 <template>
     <div>
         <el-row class="bg-light-blue social-header">
-            <el-col :md="8">
-                <h1>
-                    <a href="">Dolare</a>
-                </h1>
+            <el-col :md="8" style="display: inline-block">
+                <a href="">
+                    <img class=""  alt="">logo-img-blank
+                </a>
             </el-col>
             <el-col :md="12" >
                 <el-menu  mode="horizontal" @select="handleSelect">
@@ -16,13 +16,13 @@
                 </el-menu>
             </el-col>
             <el-col :span="4" class="">
-                    <ul class="social-icon-ul">
-                        <li class="social-icon-list bg-white" v-for="icon in icons">
-                            <a href="">
-                                <img class="social-icon" :src="icon.url" alt="">
-                            </a>
-                        </li>
-                    </ul>
+                <ul class="social-icon-ul">
+                    <li class="social-icon-list bg-white" v-for="icon in icons">
+                        <a href="">
+                            <img class="social-icon" :src="icon.url" alt="">
+                        </a>
+                    </li>
+                </ul>
             </el-col>
         </el-row>
     </div>
@@ -56,6 +56,9 @@
 </script>
 
 <style scoped>
+    .el-menu--horizontal{
+        border-bottom: none;
+    }
     ul, li{
         list-style: none;
     }
