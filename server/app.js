@@ -5,6 +5,14 @@ let logger = require('morgan');
 let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
 
+//token authentication
+let jwt = require('jsonwebtoken');
+let passport = require("letpassport");
+let passportJWT = require("passport-jwt");
+let ExtractJwt = passportJWT.ExtractJwt;
+let JwtStrategy = passportJWT.Strategy;
+
+//router
 let index = require('./routes/index');
 let users = require('./routes/users');
 

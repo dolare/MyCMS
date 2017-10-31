@@ -1,12 +1,12 @@
 <template>
     <div>
         <el-row class="bg-light-blue social-header">
-            <el-col :md="8" style="display: inline-block">
+            <el-col :sm="6">
                 <a href="">
                     <img class=""  alt="">logo-img-blank
                 </a>
             </el-col>
-            <el-col :md="12" >
+            <el-col :sm="12" >
                 <el-menu  mode="horizontal" @select="handleSelect">
                     <el-menu-item index="1">归档</el-menu-item>
                     <el-menu-item index="2">标签</el-menu-item>
@@ -15,7 +15,7 @@
                     <el-menu-item index="5">关于</el-menu-item>
                 </el-menu>
             </el-col>
-            <el-col :span="4" class="">
+            <el-col :sm="6" class="">
                 <ul class="social-icon-ul">
                     <li class="social-icon-list bg-white" v-for="icon in icons">
                         <a href="">

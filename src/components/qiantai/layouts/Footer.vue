@@ -62,7 +62,7 @@
         visibility: hidden;
     }
     .link-block{
-        margin: 40px 36px;
+        margin: 40px 30px;
 
     }
     .link-list{

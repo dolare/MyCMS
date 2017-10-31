@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import AdminHome from '@/components/houtai/layouts/Home'
-import Home from '@/components/qiantai/pages/Home'
-
+import Dashboard from '@/components/houtai/pages/Dashboard'
+import QiantaiHome from '@/components/qiantai/pages/Home'
+import Login from  '@/components/houtai/pages/Login'
 
 Vue.use(Router);
 
@@ -11,13 +11,13 @@ export default new Router({
     routes: [
         {
             path: '/admin',
-            name: 'admin',
-            component: AdminHome
+            name: 'Login',
+            component: Login
         },
         {
             path: '/',
-            name: 'home',
-            component: Home
+            name: 'QiantaiHome',
+            component: QiantaiHome
         }
     ]
 })

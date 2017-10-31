@@ -1,6 +1,6 @@
 <template>
     <el-row>
-        <el-col :span="4" style="line-height:100%;">
+        <el-col :sm="4" style="line-height:100%;">
             <time datetime="2014-09-20" class="icon">
                 <em>2014</em>
                 <strong>September</strong>
@@ -15,42 +15,14 @@
                 </li>
             </ul>
         </el-col>
-        <el-col :span="20" style="line-height: 100%; " >
+        <el-col :sm="20" style="line-height: 100%; " >
             <section style="margin-top: 30px; clear: both">
                 <header style="margin-bottom: 20px;">
-                    <p>23131</p>
+                    <p>title</p>
                 </header>
                 <div style="clear: both;all:initial;">
 
-                    <hr>
-                    <br>
-                    <p>23131</p>
-                    <p>23131</p>
-                    <p>23131</p>
-                    <p>23131</p>
-                    <p>23131</p>
-                    <p>23131</p>
-                    <p>23131</p>
-                    <p>23131</p>
-                    <p>23131</p>
-                    <p>23131</p>
-                    <p>23131</p>
-                    <br>
-                    <p>23131</p>
-                    <p>23131</p>
-                    <p>23131</p>
-                    <br>
-                    <p>23131</p>
-                    <p>23131</p>
-                    <p>23131</p>
-                    <br>
-                    <p>23131</p>
-                    <p>23131</p>
-                    <p>23131</p>
-                    <hr>
-                    <p>23131</p>
-                    <p>23131</p>
-                    <p>23131</p>
+
                 </div>
 
             </section>
