@@ -1,9 +1,9 @@
-let mongoose  = require('mongoose');
-let Schema = mongoose.Schema;
-let uuid = require('node-uuid/v4');
-let moment = require('moment');
+const mongoose  = require('mongoose');
+const Schema = mongoose.Schema;
+const uuid = require('node-uuid/v4');
+const moment = require('moment');
 
-let UserSchema = new Schema({
+const UserSchema = new Schema({
     _id: {
         type: String,
         unique: true,

@@ -1,6 +1,6 @@
 <template>
-    <div class="gradient">
-        <el-row style="padding-top: 80px;" >
+    <div>
+        <el-row style="padding-top: 60px; padding-bottom: 80px" class="gradient">
             <el-col :md="2" :lg="4" :xl="6"><div style="visibility: hidden">left aside</div></el-col>
             <el-col :sm="24" :md="20" :lg="16" :xl="12" class="main_page">
                 <el-container :span="12" :offset="6" >
