@@ -7,7 +7,7 @@
                     <span class="logo_prefix">Rui</span><span class="logo_suffix">Admin</span>
                 </div>
             </el-col>
-    
+
             <!--Search area-->
             <el-col :xs="12" :sm="12" :md="8">
                 <div class="search">
@@ -17,12 +17,12 @@
                 </div>
             </el-col>
             <!-- header right area-->
-            
+
 
             <el-col :xs="8" :sm="8" :md="{span:2,offset:8}">
                 <div class="header-right">
                     <el-col :span="10">
-    
+
                         <!--这是消息的下拉列表 用了element里的 dropdown组件-->
                         <el-dropdown menu-align="start">
                             <span>
@@ -34,7 +34,7 @@
                                 <el-dropdown-item>
                                     <span class="pop-title">You have new messages! </span>
                                 </el-dropdown-item>
-    
+
                                 <el-dropdown-item v-for="dialog in dialogs" :key="dialog.time" divided>
                                     <div class="pop-div">
                                         <span class="pop-image">
@@ -73,26 +73,26 @@
                                             {{task.content}}<br/>
                                             <span class="task-time">截止：{{task.overTime}}</span>
                                         </span>
-    
+
                                         <span class="task-span task-btn"><el-button type="primary" size="mini">完成</el-button></span>
                                     </div>
                                 </el-dropdown-item>
-    
+
                             </el-dropdown-menu>
                         </el-dropdown>
                     </el-col>
-    
-    
+
+
                 </div>
-    
+
             </el-col>
-    
+
         </el-row>
-    
-    
-    
-    
-    
+
+
+
+
+
     </div>
 </template>
 
@@ -100,57 +100,11 @@
     export default {
         data() {
             return {
-                name: 'linxin',
-                dialogs: [{
-                        header: '',
-                        content: '我有一个Style样式需要您帮忙处理以下。',
-                        time: '3'
-                    },
-                    {
-                        header: '',
-                        content: '中午一起吃个饭吧，我请客。',
-                        time: '15'
-                    },
-                    {
-                        header: '',
-                        content: '需要处理一下POP展示的白边样式。',
-                        time: '18'
-                    },
-                    {
-                        header: '',
-                        content: '下午3点开需求会议，准时参加。',
-                        time: '24'
-                    },
-                    {
-                        header: '',
-                        content: '晚上我开车送你回家，你请我吃晚饭。',
-                        time: '45'
-                    },
-                ],
-                tasks: [{
-                        id: 1,
-                        rank: 1,
-                        content: '完成JSPangAdmin头部头部组件的编写。',
-                        overTime: '2017/3/9'
-                    },
-                    {
-                        id: 2,
-                        rank: 2,
-                        content: '完成GitHub仓库的初始化工作。',
-                        overTime: '2017/3/15'
-                    },
-                    {
-                        id: 3,
-                        rank: 3,
-                        content: '在阿里云进行网站备案，完成后通知组长。',
-                        overTime: '2017/3/20'
-                    }
-    
-                ]
+
             }
         },
         methods: {
-    
+
         }
     }
 </script>
@@ -160,7 +114,7 @@
         box-sizing: border-box;
         width: 100%;
         height:66px;
-       
+
         font-size: 14px;
         line-height: 66px;
         background-color:#324157;
@@ -168,7 +122,6 @@
         z-index:1000;
         padding:0 32px 0 40px;
         overflow:hidden;
-       
     }
     .header .logo{
         float: left;
@@ -254,8 +207,8 @@
         float:left;
         font-size:12px
     }
-    
-    .task-content{  
+
+    .task-content{
         width:160px;
         line-height:16px;
         margin-left:10px;
@@ -265,7 +218,7 @@
         clear:both;
         float:right;
         color:#ccc;
-        
+
     }
     .setting-div{
         height:30px;
@@ -281,5 +234,5 @@
         padding-top:3px;
         padding-right:3px;
     }
-    
+
 </style>

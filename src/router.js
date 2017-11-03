@@ -13,12 +13,12 @@ export default new Router({
         {
             path: '/login',
             name: 'Login',
-            component: Login,
+            component: Login
         },
         {
             path: '/admin',
             name: 'AdminHome',
-            component: AdminHome,
+            component: AdminHome
         },
         {
             path: '/',

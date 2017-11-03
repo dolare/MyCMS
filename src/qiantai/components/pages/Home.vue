@@ -1,30 +1,27 @@
 <template>
-    <div>
-        <el-row style="padding-top: 60px; padding-bottom: 80px" class="gradient">
-            <el-col :md="2" :lg="4" :xl="6"><div style="visibility: hidden">left aside</div></el-col>
-            <el-col :sm="24" :md="20" :lg="16" :xl="12" class="main_page">
-                <el-container :span="12" :offset="6" >
-                    <el-header>
-                        <nav-header>
-                        </nav-header>
-                    </el-header>
-                    <el-container>
-                        <el-main>
-                            <article-content></article-content>
-                        </el-main>
-                        <el-aside >
-                            <nav-sidebar></nav-sidebar>
-                        </el-aside>
-                    </el-container>
-                    <div id="footer">
-                        <home-footer></home-footer>
-                    </div>
+    <el-row style="padding-top: 60px; padding-bottom: 80px" class="gradient">
+        <el-col :md="2" :lg="4" :xl="6"><div style="visibility: hidden">left aside</div></el-col>
+        <el-col :sm="24" :md="20" :lg="16" :xl="12" class="main_page">
+            <el-container :span="12" :offset="6" >
+                <el-header>
+                    <nav-header>
+                    </nav-header>
+                </el-header>
+                <el-container>
+                    <el-main>
+                        <article-content></article-content>
+                    </el-main>
+                    <el-aside >
+                        <nav-sidebar></nav-sidebar>
+                    </el-aside>
                 </el-container>
-            </el-col>
-            <el-col :md="2" :lg="4" :xl="6"><div style="visibility: hidden">right aside</div></el-col>
-        </el-row>
-    </div>
-
+                <div id="footer">
+                    <home-footer></home-footer>
+                </div>
+            </el-container>
+        </el-col>
+        <el-col :md="2" :lg="4" :xl="6"><div style="visibility: hidden">right aside</div></el-col>
+    </el-row>
 </template>
 
 <script>
