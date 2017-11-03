@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
 const passport = require('passport');
-const db = require('../dbSetting/db');
+
 
 /* GET home page. */
 router.get('/', passport.authenticate('jwt', { session: false }), function(req, res, next) {
@@ -18,7 +18,8 @@ router.post('/login', function(req, res) {
         let passport = req.body.passport;
     }
 
-    //find if there this user in database
+    //find if there is such user in database
+
 
     if(!user){
         res.status(401).json({message: 'no such user found'});
@@ -37,11 +38,8 @@ router.post('/create_user', function(req, res, next) {
     if(req.body.email && req.body.passport){
         let email = req.body.email;
         let passport = req.body.passport;
-
-
     }else{
         res.status(400).json({message: "password and email are required"});
-
     }
 });
 

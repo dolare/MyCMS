@@ -13,6 +13,7 @@
     "jade": "~1.11.0",
     "jsonwebtoken": "^8.1.0",
     "lodash": "^4.17.4",
+    "log4js": "^2.3.11",
     "moment": "^2.19.1",
     "mongoose": "^4.12.4",
     "morgan": "~1.8.1",
@@ -21,6 +22,7 @@
     "passport-jwt": "^3.0.1",
     "passport-local": "^1.0.0",
     "serve-favicon": "~2.4.2",
+    "validator": "^9.1.1",
     "vuex": "^3.0.0"
   }
 }
