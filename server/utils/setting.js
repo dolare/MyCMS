@@ -8,4 +8,7 @@ module.exports = {
     DBUSERNAME: process.env.DBUSERNAME,
     DBPASSWORD: process.env.DBPASSWORD,
 
+    //private key for crypto
+    PRIVATEKEY: process.env.PRIVATEKEY
+
 };
