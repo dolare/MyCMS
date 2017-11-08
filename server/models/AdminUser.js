@@ -1,5 +1,5 @@
 let mongoose = require('mongoose');
-let uuid = require('node-uuid/v4');
+let uuid = require("uuid/v4");
 let Schema = mongoose.Schema;
 let AdminGroup = require('./AdminGroup');
 
@@ -7,7 +7,6 @@ let AdminGroup = require('./AdminGroup');
 let AdminUserSchema = new Schema({
     _id: {
         type: String,
-        unique: true,
         default: uuid()
     },
     username: String,

@@ -1,12 +1,11 @@
 const mongoose  = require('mongoose');
 const Schema = mongoose.Schema;
-const uuid = require('node-uuid/v4');
+const uuid = require("uuid/v4");
 const moment = require('moment');
 
 const UserSchema = new Schema({
     _id: {
         type: String,
-        unique: true,
         default: uuid()
     },
     isAdmin: {

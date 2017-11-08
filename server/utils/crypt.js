@@ -1,5 +1,5 @@
 const crypto = require("crypto");
-const PRIVATEKEY = require("setting").PRIVATEKEY;
+const PRIVATEKEY = require("./setting").PRIVATEKEY;
 
 module.exports = {
     encrypt: function (data, key) {

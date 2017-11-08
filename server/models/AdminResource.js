@@ -1,11 +1,10 @@
 let mongoose = require('mongoose');
-let uuid = require('node-uuid/v4');
+let uuid = require("uuid/v4");
 let Schema = mongoose.Schema;
 
 let AdminResourceSchema = new Schema({
     _id: {
         type: String,
-        unique: true,
         default: uuid()
     },
     name: String,

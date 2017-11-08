@@ -1,12 +1,11 @@
 let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
-let uuid = require('node-uuid/v4');
+let uuid = require('uuid/v4');
 
 
 let ArticleCategorySchema = new Schema({
     _id: {
         type: String,
-        unique: true,
         default: uuid()
     },
     name: String,

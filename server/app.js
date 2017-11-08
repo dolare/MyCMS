@@ -5,15 +5,10 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
+const app = express();
 //token authentication
 const passportJWT = require("passport-jwt");
 const passport = require('./controllers/strategies')
-
-//router
-const index = require('./routes/index');
-
-const app = express();
-
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -24,8 +19,10 @@ app.use(cookieParser());
 
 app.use(passport.initialize());
 
+//router
+const user = require('./routes').User;
 
-app.use('/api', index);
+app.use('/api/user', user);
 
 
 // catch 404 and forward to error handler

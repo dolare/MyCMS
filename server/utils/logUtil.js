@@ -14,28 +14,35 @@ let responseLogRootPath = '/response';
 let responseLogPath = baseLogPath + '/response/response';
 
 let logConfig = {
-    "appenders": [
+    appenders: {
         //error logs write by hours
-        {
-            "category": "errorLogger", //logger name
+        errorLogger: {
             "type": "dateFile",        //log type
             "filename": errorLogPath,  // output location
             "pattern": "-yyyy-mm-dd.log",  //file extension
-            "path": errorLogRootPath    //root path
+            "path": errorLogRootPath,   //root path
         },
-        {
-            "category": "resLogger",
+        resLogger: {
             "type": "dateFile",
             "filename": responseLogPath,
             "pattern": "-yyyy-mm-dd.log",
-            "path": responseLogRootPath
+            "path": responseLogRootPath,
         }
-    ],
-    "levels": {
-        "errorLogger": "ERROR",
-        "resLogger": "ALL"
     },
-    "baseLogPath": baseLogPath       //log file root path
+    categories: {
+        errorLogger: {
+            appenders:["errorLogger"],
+            level: "ERROR"
+        },
+        resLogger: {
+            appenders: ["resLogger"],
+            level: "ALL"
+        },
+        default:{
+            appenders: ["resLogger"],
+            level: "ALL"
+        },
+    }
 };
 
 log4js.configure(logConfig);

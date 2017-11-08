@@ -1,7 +1,7 @@
 let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 let moment = require('moment');
-let uuid = require('node-uuid/v4');
+let uuid = require('uuid/v4');
 let ArticleTag = require('./ArticleTag');
 let ArticleCategory = require('./ArticleCategory');
 let User = require('./User');
@@ -10,7 +10,6 @@ let User = require('./User');
 let ArticleSchema = new Schema({
     _id: {
         type: String,
-        unique: true,
         default: uuid()
     },
     title: String,

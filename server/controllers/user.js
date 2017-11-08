@@ -46,6 +46,7 @@ class User {
     }
 
     async getOneUser(req, res, params) {
+        console.log("ooo");
         return await UserModel.findOne(params, { password: 0 });
     }
 
