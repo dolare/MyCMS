@@ -212,71 +212,71 @@ class User {
     }
 
     async regUser(req, res, next) {
-        const form = new formidable.IncomingForm();
-        form.parse(req, async (err, fields, files) => {
-            try {
-                let errMsg = "";
 
-                if(!validators.checkPwd(fields.password)){
-                    errMsg = "password format error";
-                }
-                if(!validators.checkUsername(fields.username)){
-                    errMsg = "username format error";
-                }
-                if(!validators.checkEmail(fields.email)){
-                    errMsg = "email format error";
-                }
-                if(fields.password != fields.confirmPassword){
-                    errMsg = "password is not equal to confirmpassword";
-                }
+        try {
+            let errMsg = "";
 
-                if(errMsg) {
-                    res.send({
-                        state: "error",
-                        type: "ERROR_PARAMS",
-                        message: errMsg
-                    })
-                    return;
-                }
-            } catch(err) {
-                console.log(err.message, err);
+            if(!validators.checkPwd(req.body.password)){
+                errMsg = "password format error";
+            }
+            console.log(req.body);
+            if(!validators.checkUsername(req.body.username)){
+                errMsg = "username format error";
+            }
+            if(!validators.checkEmail(req.body.email)){
+                errMsg = "email format error";
+            }
+            if(req.body.password != req.body.confirmPassword){
+                errMsg = "password is not equal to confirmpassword";
+            }
+
+            if(errMsg) {
                 res.send({
-                    state: 'error',
-                    type: 'ERROR_PARAMS',
-                    message: err.message
+                    state: "error",
+                    type: "ERROR_PARAMS",
+                    message: errMsg
                 })
                 return;
             }
+        } catch(err) {
+            console.log(err.message, err);
+            res.send({
+                state: 'error',
+                type: 'ERROR_PARAMS',
+                message: err.message
+            })
+            return;
+        }
 
-            try{
-                const userObj = {
-                    username: fields.username,
-                    email: fields.email,
-                    password: crypt.encrypt(fields.password)
-                };
-                let user = await UserModel.find().or([{"email": fields.email}, {"username": fields.username}]);
-                if(!_isEmpty(user)) {
-                    res.send({
-                        state: "error",
-                        message: "email or username already exists."
-                    });
-                } else {
-                    let newUser = new UserModel(userObj);
-                    await newUser.save();
-
-                    res.send({
-                        state: "success",
-                        message: "register successfully"
-                    })
-                }
-            } catch (err) {
+        try{
+            const userObj = {
+                username: req.body.username,
+                email: req.body.email,
+                password: crypt.encrypt(req.body.password)
+            };
+            let user = await UserModel.find().or([{"email": req.body.email}, {"username": req.body.username}]);
+            if(!_.isEmpty(user)) {
                 res.send({
                     state: "error",
-                    type: "ERROR_IN_SAVE_DATA",
-                    message: err.stack
+                    message: "email or username already exists."
+                });
+            } else {
+                let newUser = new UserModel(userObj);
+                await newUser.save();
+
+                res.send({
+                    state: "success",
+                    message: "register successfully"
                 })
             }
-        })
+        } catch (err) {
+            res.send({
+                state: "error",
+                type: "ERROR_IN_SAVE_DATA",
+                message: err.stack
+            })
+        }
+
     }
 
     async logOut(req, res, next) {
