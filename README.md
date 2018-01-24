@@ -1,4 +1,4 @@
-# content_management_system
+# blog
 
 > A Vue.js project
 
@@ -18,12 +18,4 @@ npm run build
 npm run build --report
 ```
 
-# Steps
-
-## Day1
-
-1. built the folder structures.
-
-2. created houtai's header component
-
-3. key words: :gutter and :span of layout in elementUI, 
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
