@@ -1,0 +1,111 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@mixin scrollBar {
+  &::-webkit-scrollbar-track-piece {
+    background: #d3dce6;
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #99a9bf;
+    border-radius: 20px;
+  }
+}
+
+@mixin relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin pct($pct) {
+  width: #{$pct};
+  position: relative;
+  margin: 0 auto;
+}
+
+@mixin triangle($width, $height, $color, $direction) {
+  $width: $width/2;
+  $color-border-style: $height solid $color;
+  $transparent-border-style: $width solid transparent;
+  height: 0;
+  width: 0;
+  @if $direction==up {
+    border-bottom: $color-border-style;
+    border-left: $transparent-border-style;
+    border-right: $transparent-border-style;
+  }
+  @else if $direction==right {
+    border-left: $color-border-style;
+    border-top: $transparent-border-style;
+    border-bottom: $transparent-border-style;
+  }
+  @else if $direction==down {
+    border-top: $color-border-style;
+    border-left: $transparent-border-style;
+    border-right: $transparent-border-style;
+  }
+  @else if $direction==left {
+    border-right: $color-border-style;
+    border-top: $transparent-border-style;
+    border-bottom: $transparent-border-style;
+  }
+}
+
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == mob_pot {
+    @media only screen and (max-width: 479px) { @content };    //479
+  }
+  @if $breakpoint == mob_land {
+    @media only screen and (max-width: 575px) { @content };    //575
+  }
+  @if $breakpoint == tab_xs {
+    @media only screen and (max-width: 767px) { @content };    //767
+  }
+  @if $breakpoint == tab_sm {
+    @media only screen and (max-width: 991px) { @content };     //991
+  }
+  @if $breakpoint == desk_md {
+    @media only screen and (max-width: 1199px) { @content };    //1199
+  }
+  @if $breakpoint == desk_lg {
+    @media only screen and (max-width: 1300px) { @content };    //1300
+  }
+  @if $breakpoint == desk_desk {
+    @media only screen and (min-width: 1500px) { @content };    //1500
+  }
+  @if $breakpoint == desk_big {
+    @media only screen and (min-width: 1900px) { @content };    //1900
+  }
+}

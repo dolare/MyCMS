@@ -1,0 +1,40 @@
+html {
+  // This defines what 1rem is
+  font-size: 100%; //1 rem = 10px; 10px/16px = 62.5%
+
+  min-height: 100%;
+  box-sizing: border-box;
+
+  @include respond(desk_big) {
+    font-size: 100%; //width < 1900?
+  }
+
+  @include respond(desk_desk) {
+    font-size: 100%; //width < 1500?
+  }
+
+  @include respond(desk_lg) {
+    font-size: 100%; //width < 1300?
+  }
+
+  @include respond(desk_md) {
+    font-size: 100%; //width < 1199?
+  }
+
+  @include respond(tab_sm) {
+    font-size: 95%; //width < 991?
+  }
+
+  @include respond(tab_xs) {
+    font-size: 90%; //width < 767?
+  }
+
+  @include respond(mob_land) { // width < 575?
+    font-size: 85%; //1 rem = 9px, 9/16 = 50%
+  }
+
+  @include respond(mob_pot) { // width < 479?
+    font-size: 80%; //1 rem = 8px, 8/16 = 50%
+  }
+
+}
