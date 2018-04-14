@@ -7,7 +7,6 @@ import store from './store'
 
 import 'jquery'
 import BootstrapVue from 'bootstrap-vue'
-import 'bootstrap'
 import 'bootstrap-social'
 
 import ElementUI from 'element-ui'
